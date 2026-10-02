@@ -68,3 +68,79 @@ footer{padding:36px 5vw;border-top:1px solid var(--line);text-align:center;color
 .nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 5vw;gap:12px;border-bottom:1px solid var(--line)}.nav-menu.open{display:flex}
 .instagram-grid{grid-template-columns:repeat(2,1fr)}.input-row{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+body.booking>section:not(#bookpage){display:none}
+body:not(.booking)>#bookpage{display:none}
+.book-wrap{max-width:720px;margin:0 auto}.book-note{color:var(--mute)}
+.book-form{display:grid;gap:22px;margin-top:24px}
+fieldset{border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:14px;margin:0;background:var(--card)}
+legend{font:700 20px 'Playfair Display',serif;padding:0 8px;color:var(--acc)}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+select{width:100%;padding:14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+input.bad,select.bad{border-color:#c0392b}
+.form-error{color:#c0392b;font-weight:700;margin:0}
+.book-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Booking page styling */
+#bookpage{padding-top:3vw}
+.book-wrap{max-width:860px}
+.book-hero{background:linear-gradient(120deg,#3b2a38,#b4532a 60%,#f0b27a);color:#fff;border-radius:14px;padding:clamp(28px,5vw,56px);margin:18px 0 26px}
+.book-hero .eyebrow{color:#ffe2c4}.book-hero h2{margin-bottom:12px}.book-hero h2 span{color:#ffe2c4}
+.book-hero .book-note{color:#fff;opacity:.92;margin:0;max-width:34em}
+.book-form{counter-reset:step;gap:26px}
+.book-form fieldset{border-radius:14px;padding:clamp(20px,4vw,34px);box-shadow:0 10px 30px rgba(36,28,26,.07)}
+.book-form legend{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:22px;padding:0 6px}
+.book-form legend::before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;font:700 15px 'DM Sans',sans-serif}
+.book-form label{font-size:14px;font-weight:700;letter-spacing:.02em;gap:8px}
+.book-form input,.book-form select,.book-form textarea{border-radius:10px;padding:14px 16px;background:var(--bg);font-weight:400;transition:border-color .2s,box-shadow .2s}
+.book-form input:focus,.book-form select:focus,.book-form textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 4px rgba(180,83,42,.2)}
+.book-form select{appearance:none;-webkit-appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'%3E%3Cpath d='M1 1l7 7 7-7' fill='none' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.book-actions{gap:14px}
+.book-actions .btn{flex:1;min-width:210px;text-align:center;padding:16px 24px;font-size:17px}
+.book-actions .primary-btn{background:#17803c;border-color:#17803c}
+.book-actions .primary-btn:hover{background:#126a32}
+.book-actions .btn:not(.primary-btn):hover{background:var(--ink);color:var(--bg)}
+.text-link{display:inline-block;padding:6px 0}
+
+/* Rating */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.rate-card{max-width:640px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,40px);text-align:center;box-shadow:0 10px 30px rgba(36,28,26,.07)}
+.rate-note{color:var(--mute);margin:0 0 20px}
+.rate-card form{display:grid;gap:16px;text-align:left}
+.rate-card fieldset{border:0;padding:0;margin:0;text-align:center;background:none;display:block}
+.star-row{display:inline-flex;flex-direction:row-reverse;gap:6px}
+.star-row label{font-size:clamp(38px,9vw,52px);line-height:1;color:var(--line);cursor:pointer;transition:color .15s,transform .15s;display:block}
+.star-row label:hover{transform:scale(1.12)}
+.star-row input:checked~label,.star-row label:hover,.star-row label:hover~label{color:#e0a100}
+.star-row input:focus-visible+label{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.star-text{margin:6px 0 0;color:var(--mute);font-weight:700;min-height:1.6em}
+.rate-card label:not(.star-row label){display:grid;gap:6px;font-weight:700;font-size:14px}
+.rate-thanks{color:#17803c;font-weight:700;text-align:center;margin:0}
+.rate-card .btn{flex:1;min-width:190px;text-align:center}
+.rate-card .primary-btn{background:#17803c;border-color:#17803c}
+
+/* Payment QR */
+.pay-note{margin:0;color:var(--mute);font-size:15px}
+.pay-box{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.qr-frame{background:#fff;padding:14px;border-radius:12px;border:1px solid var(--line);width:min(100%,290px);display:block}
+.qr-frame canvas,.qr-frame img{max-width:100%;height:auto}
+.pay-info{display:grid;gap:4px;justify-items:start}
+.pay-info span{font-size:13px;color:var(--mute);margin-top:8px}
+.pay-info strong{word-break:break-all}
+.pay-info .btn{margin-top:14px;background:var(--acc);border-color:var(--acc);color:#fff}
+
+/* Director */
+.director{display:inline-flex;flex-direction:column;margin:0 0 26px;padding-left:16px;border-left:3px solid #ffe2c4}
+.director span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#ffe2c4;font-weight:700}
+.director strong{font:700 clamp(24px,4vw,34px)/1.2 'Playfair Display',serif;color:#fff}
+.people{display:flex;gap:18px 40px;flex-wrap:wrap;margin:0 0 26px}.people .director{margin:0}
+.director.faculty strong{font:700 clamp(17px,2.6vw,21px)/1.3 'DM Sans',system-ui,sans-serif;letter-spacing:.01em}
+.director.faculty{justify-content:flex-end}
+
+/* Director photo */
+.about-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:6px}
+.about .experience-card{z-index:2}
+.dir-photo{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid #ffe2c4;align-self:center}
+.people{align-items:center}
+.about .experience-card{top:24px;bottom:auto}
+.about .experience-card{top:50%;bottom:auto;transform:translateY(-50%)}
