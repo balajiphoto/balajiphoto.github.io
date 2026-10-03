@@ -15,14 +15,14 @@
 <p class="eyebrow">Professional photographer</p>
 <h1>Capturing<br><span>Moments</span><br>That Matter.</h1>
 <p class="hero-description">I turn genuine emotions, beautiful places and unforgettable moments into timeless photographs.</p>
-<div class="people"><img class="dir-photo" src="director-face.jpg" alt="Vishal Kumar" width="84" height="84"><p class="director"><span>Director</span><strong>Vishal Kumar</strong></p><p class="director faculty"><span>Our Team</span><strong>Pawan Singh</strong><strong>Gourav Arya</strong></p></div>
+<div class="people"><canvas class="dir-photo" id="cvFace" width="120" height="120" role="img" aria-label="Vishal Kumar"></canvas><p class="director"><span>Director</span><strong>Vishal Kumar</strong></p><p class="director faculty"><span>Our Team</span><strong>Pawan Singh</strong><strong>Gourav Arya</strong></p></div>
 <div class="hero-buttons"><a href="#portfolio" class="btn primary-btn">Explore my work</a><a href="#book" class="btn">Book a session</a></div>
 </div></section>
 
 <section class="stats"><div><h3>250+</h3><p>Happy clients</p></div><div><h3>500+</h3><p>Photoshoots</p></div><div><h3>4+</h3><p>Years experience</p></div><div><h3>25+</h3><p>Destinations</p></div></section>
 
 <section class="about section" id="about">
-<div class="ph" id="aboutph" style="position:relative;aspect-ratio:352/551;max-width:420px;width:100%;margin-inline:auto"><img class="about-img" src="director.jpg" alt="Vishal Kumar, Director of Shri Balaji Photo Studio" width="352" height="551"><div class="experience-card"><strong>04</strong><span>Years of<br>experience</span></div></div>
+<div class="ph" id="aboutph" style="position:relative;aspect-ratio:352/551;max-width:420px;width:100%;margin-inline:auto"><canvas class="about-img" id="cvAbout" width="280" height="438" role="img" aria-label="Vishal Kumar, Director of Shri Balaji Photo Studio"></canvas><div class="experience-card"><strong>04</strong><span>Years of<br>experience</span></div></div>
 <div><p class="eyebrow">About the photographer</p>
 <h2>More than just <span>a photograph.</span></h2>
 <p>Hi, I'm Vishal, a photographer, storyteller and lover of beautiful moments.</p>
@@ -84,7 +84,7 @@
 <label>Anything else?<textarea id="b_msg" rows="4" placeholder="Ideas, theme, special requests..."></textarea></label></fieldset>
 <fieldset class="pay"><legend>Pay advance online</legend>
 <p class="pay-note">Optional. Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to pay the booking advance.</p>
-<div class="pay-box" id="payBox"><div class="qr-frame" id="upiQr"><img src="payment-qr.png" alt="UPI payment QR code. Scan with any UPI app to pay" width="260" height="293"></div>
+<div class="pay-box" id="payBox"><div class="qr-frame"><canvas id="upiQr" width="328" height="328" role="img" aria-label="UPI payment QR code. Scan with any UPI app to pay"></canvas></div>
 <div class="pay-info"><span>UPI ID</span><strong id="upiIdText"></strong><span>Name</span><strong id="upiName"></strong>
 <a class="btn" id="upiOpen" href="#">Open in UPI app</a></div></div>
 <p class="pay-note" id="payEmpty" hidden>Online payment details will be shared with you on WhatsApp after booking.</p>
